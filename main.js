@@ -2,7 +2,7 @@ let getClub = function(){
     clubDic = {};
     $.ajax({
         url: 'clubList.json',
-        type: 'POST',
+        type: 'GET',
         dataType: 'json'
     })
     .done(function(data){
