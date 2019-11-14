@@ -30,7 +30,9 @@ let makeDOM = function(){
             );
         }else{
             currentRowNum++;
-            row.append($('<td>').attr('src', 'img/none.png'));
+            row.append($('<td>')
+            .append($('<img>').attr('src', 'img/none.png')
+            ));
         }
         currentRowNum ++;
     }
