@@ -19,14 +19,14 @@ let getClub = function () {
 
 let makeDOM = function () {
     let rowNum = 3;
-    let currentRowNum = 0;
+    let currentRowNum = 1;
 
     $('#sheet').append(
         row = $('<tr>')
     );
     for (let i = 0; i < keys.length; i++) {
         if (currentRowNum > rowNum) {
-            currentRowNum = 0;
+            currentRowNum = 1;
             $('#sheet').append(
                 row = $('<tr>')
             );
