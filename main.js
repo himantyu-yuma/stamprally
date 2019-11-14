@@ -1,7 +1,7 @@
 let start = function(){
     getClub();
-    makeDOM();
     getId();
+    checkProgress();
 }
 
 let getClub = function () {
@@ -16,6 +16,9 @@ let getClub = function () {
             clubDic = data;
             // 部活のid
             keys = Object.keys(clubDic);
+            // json取得後にDOM構築
+            makeDOM();
+
         })
         .fail(function (data) {
             alert('読み込みに失敗しました')
@@ -68,3 +71,5 @@ let getId = function () {
 let checkProgress = function(){
     
 }
+
+start();
