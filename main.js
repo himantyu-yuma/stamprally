@@ -25,7 +25,7 @@ let makeDOM = function(){
     for (let i = 0; i < clubNum; i++) {
         if(currentRowNum > rowNum){
             currentRowNum = 0;
-            $('.sheet').append(
+            $('#sheet').append(
                 row = $('<tr>')
             );
         }else{
