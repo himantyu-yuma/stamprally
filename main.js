@@ -1,3 +1,9 @@
+let start = function(){
+    getClub();
+    makeDOM();
+    getId();
+}
+
 let getClub = function () {
     clubDic = {};
     $.ajax({
@@ -47,7 +53,19 @@ let getId = function () {
     if (location.search == '') {
         return;
     } else {
+        // クエリからid部分を取得
         id = location.search.replace('?id=', '');
+        // もうすでに取得済みなら何もしない
+        if(localStorage.getItem(id)){
+            return;
+        }else{
+            // localStorageに進捗を保存
+            localStorage.setItem(id, clubDic[id]);
+        }
     }
     $(`#${id}`).attr('src', 'img/stamp.png')
+}
+
+let checkProgress = function(){
+    
 }
