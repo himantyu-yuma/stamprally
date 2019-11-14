@@ -49,7 +49,6 @@ let makeDOM = function () {
 }
 
 let getId = function () {
-    let id;
     if (location.search == '') {
         return;
     } else {
