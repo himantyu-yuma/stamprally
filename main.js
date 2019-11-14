@@ -19,7 +19,7 @@ let makeDOM = function(){
     let rowNum = 3;
     let currentRowNum = 0;
 
-    $('.sheet').append(
+    $('#sheet').append(
         row = $('<tr>')
     );
     for (let i = 0; i < clubNum; i++) {
