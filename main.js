@@ -6,7 +6,10 @@ let getClub = function(){
         dataType: 'json'
     })
     .done(function(data){
+        // 部活のidと名前のjsonを連想配列に
         clubDic = data;
+        // 部活のid
+        keys = Object.keys(clubDic);
     })
     .fail(function(data){
         alert('読み込みに失敗しました')
@@ -15,7 +18,7 @@ let getClub = function(){
 }
 
 let makeDOM = function(){
-    let clubNum = Object.keys(clubDic).length;
+    let clubNum = keys.length;
     let rowNum = 3;
     let currentRowNum = 0;
 
@@ -31,7 +34,10 @@ let makeDOM = function(){
         }else{
             currentRowNum++;
             row.append($('<td>')
-            .append($('<img>').attr('src', 'img/none.png')
+            .append($('<img>'),{
+                'src': 'img/none.png',
+                'id': keys[i]
+            }
             ));
         }
         currentRowNum ++;
