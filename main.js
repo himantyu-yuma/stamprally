@@ -7,11 +7,33 @@ let getClub = function(){
     })
     .done(function(data){
         clubDic = data;
-        console.log(clubDic['0001'])
     })
     .fail(function(data){
+        alert('読み込みに失敗しました')
         console.log(data);
     });
+}
+
+let makeDOM = function(){
+    let clubNum = Object.keys(clubDic).length;
+    let rowNum = 3;
+    let currentRowNum = 0;
+
+    $('.sheet').append(
+        row = $('<tr>')
+    );
+    for (let i = 0; i < clubNum; i++) {
+        if(currentRowNum > rowNum){
+            currentRowNum = 0;
+            $('.sheet').append(
+                row = $('<tr>')
+            );
+        }else{
+            currentRowNum++;
+            row.append($('<td>').attr('src', 'img/none.png'));
+        }
+        currentRowNum ++;
+    }
 }
 
 let getId = function (){
