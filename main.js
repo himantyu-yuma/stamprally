@@ -34,10 +34,10 @@ let makeDOM = function(){
         }else{
             currentRowNum++;
             row.append($('<td>')
-            .append($('<img>'),{
+            .append($('<img>',{
                 'src': 'img/none.png',
                 'id': keys[i]
-            }
+            })
             ));
         }
         currentRowNum ++;
