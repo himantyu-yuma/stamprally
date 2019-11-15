@@ -1,7 +1,5 @@
 let start = function(){
     getClub();
-    getId();
-    checkProgress();
 }
 
 let getClub = function () {
@@ -71,6 +69,7 @@ let getId = function () {
 }
 
 let checkProgress = function(){
+
     for (let i = 0; i < keys.length; i++) {
         if(localStorage.getItem(keys[i])){
             $(`#${keys[i]}`).attr('src', `img/${keys[i]}.png`);
