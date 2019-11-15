@@ -18,7 +18,8 @@ let getClub = function () {
             keys = Object.keys(clubDic);
             // json取得後にDOM構築
             makeDOM();
-
+            getId();
+            checkProgress();
         })
         .fail(function (data) {
             alert('読み込みに失敗しました')
