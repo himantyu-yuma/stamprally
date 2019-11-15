@@ -66,10 +66,15 @@ let getId = function () {
         }
     }
     $(`#${id}`).attr('src', 'img/stamp.png')
+    alert(`${clubDic[id]}のスタンプを獲得しました！`)
 }
 
 let checkProgress = function(){
-    
+    for (let i = 0; i < keys.length; i++) {
+        if(localStorage.getItem(keys[i])){
+            $(`#${keys[i]}`).attr('src', `img/${keys[i]}.png`);
+        }
+    }
 }
 
 start();
