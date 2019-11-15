@@ -1,6 +1,7 @@
-let start = function(){
+let start = function () {
     getClub();
 }
+
 
 let getClub = function () {
     clubDic = {};
@@ -18,11 +19,19 @@ let getClub = function () {
             makeDOM();
             getId();
             checkProgress();
+            preload();
         })
         .fail(function (data) {
             alert('読み込みに失敗しました')
             console.log(data);
         });
+}
+
+let preload = function () {
+    for (let i = 0; i < keys.length; i++) {
+        $(`<img src="img/${clubDic[keys[i]]}.png"`);
+        console.log(`preload${keys[i]}`);
+    }
 }
 
 let makeDOM = function () {
@@ -57,9 +66,9 @@ let getId = function () {
         // クエリからid部分を取得
         id = location.search.replace('?id=', '');
         // もうすでに取得済みなら何もしない
-        if(localStorage.getItem(id)){
+        if (localStorage.getItem(id)) {
             return;
-        }else{
+        } else {
             // localStorageに進捗を保存
             localStorage.setItem(id, clubDic[id]);
         }
@@ -68,10 +77,10 @@ let getId = function () {
     alert(`${clubDic[id]}のスタンプを獲得しました！`)
 }
 
-let checkProgress = function(){
+let checkProgress = function () {
 
     for (let i = 0; i < keys.length; i++) {
-        if(localStorage.getItem(keys[i])){
+        if (localStorage.getItem(keys[i])) {
             $(`#${keys[i]}`).attr('src', `img/${keys[i]}.png`);
         }
     }
