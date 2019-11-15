@@ -8,5 +8,6 @@ jsonファイルの書式については適宜調べてください．
 - QRコードの作成
 QRコード作成サイトで，url?id=(生成したid)をQRコード化します．  
 例)https://himantyu-yuma.github.io/stamprally/?id=0003  
+### ※注意：スタンプ画像のファイル名をidにするのを忘れないようにしてください．
 
 以上．
