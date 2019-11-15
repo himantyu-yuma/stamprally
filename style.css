@@ -1,9 +1,12 @@
 img{
-    width: 10vw;
+    width: 25vw;
 }
 
 body{
     font-family: 'Kosugi Maru', sans-serif;
     background-color: rgb(255, 230, 0);
+}
 
+td{
+    background-color: white;;
 }
