@@ -7,7 +7,7 @@ jsonファイルの書式については適宜調べてください．
 [こちら](http://www.japan9.com/cgi/rand_num.cgi)のサイトでランダムな文字列が生成できるので試してみてください．）  
 - QRコードの作成
 QRコード作成サイトで，url?id=(生成したid)をQRコード化します．  
-例)https://himantyu-yuma.github.io/stamprally/?id=0003  
+例)https://himantyu-yuma.github.io/stamprally/?id=6kmzbf  
 ### ※注意：スタンプ画像のファイル名をidにするのを忘れないようにしてください．
 
 以上．
