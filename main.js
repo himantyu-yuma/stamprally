@@ -50,12 +50,13 @@ let makeDOM = function () {
         }
         currentRowNum++;
         row.append($('<td>')
+            .append($(`<p class="text-center">${clubDic[keys[i]]}</p>`))
             .append($('<img>', {
                 'src': 'img/none.png',
                 'id': keys[i]
             })
             )
-            .append($(`<p>${clubDic[keys[i]]}</p>`)));
+        );
 
     }
 }
