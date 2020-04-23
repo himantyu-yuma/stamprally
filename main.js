@@ -29,7 +29,7 @@ let getClub = function () {
 
 let preload = function () {
     for (let i = 0; i < keys.length; i++) {
-        $(`<img src="img/${keys[i]}.png"`);
+        $(`<img src="img/${keys[i]}.png">`);
         console.log(`preload${keys[i]}`);
     }
 }
